@@ -1,3 +1,4 @@
+
 require 'pry'
 
 # Write your code here!
@@ -173,9 +174,18 @@ def big_shoe_rebounds
 # first determine which player has the biggest shoe size and fetch that stat. then fetch his :rebound.  
  
   big_shoes = players.max_by { | player, stat | stat.fetch(:shoe)}
+  #binding.pry
   big_shoes[1].fetch(:rebounds)
+  #binding.pry
 end
 
+def jersey_number (jersey)
+  hooper = players.find { | name, stat | stat.fetch(:number) == jersey }
+  #binding.pry 
+  hooper[0]
+end 
+
+jersey_number(30)
 
 # BONUS:
 
@@ -216,3 +226,5 @@ end
 good_practices
 
 =end 
+
+
